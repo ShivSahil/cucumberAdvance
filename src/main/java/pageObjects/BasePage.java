@@ -32,7 +32,7 @@ import cucumber.api.Scenario;
 import utils.DriverFactory;
 
 public class BasePage extends DriverFactory {
-	public WebDriverWait wait;
+	private WebDriverWait wait;
 	private static String screenshotName;
 
 	public BasePage() throws IOException {
@@ -46,7 +46,7 @@ public class BasePage extends DriverFactory {
 	 **********************************************************************************/
 	
 	
-	// %%%%%
+
 	public void waitAndClickElement(WebElement element) throws InterruptedException, IOException {
 		
 			try {
@@ -66,7 +66,7 @@ public class BasePage extends DriverFactory {
 	 **SEND KEYS METHODS /
 	 **********************************************************************************/
 	
-	// %%%%%%
+	
 	
 	public void sendKeysToWebElement(WebElement element, String textToSend) throws Exception {
 		try {
@@ -87,7 +87,7 @@ public class BasePage extends DriverFactory {
 	 **WAIT METHODS
 	 **********************************************************************************/
 	
-	//%%%%%%
+	
 	public boolean WaitUntilWebElementIsVisible(WebElement element) {
 		try {
 			this.wait.until(ExpectedConditions.visibilityOf(element));
@@ -111,7 +111,10 @@ public class BasePage extends DriverFactory {
 	}
 	
 	
-	// %%%%%%%
+	
+	
+	
+	// this is used for screenshot capturing
 	public static void captureScreenshot() throws IOException, InterruptedException {
 		
 		File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
@@ -126,7 +129,7 @@ public class BasePage extends DriverFactory {
 		//Reporter.addStepLog("<a target=\"_blank\", href="+ returnScreenshotName() + "><img src="+ returnScreenshotName()+ " height=200 width=300></img></a>");
 	}
 	
-	// %%%%%%%
+
 	public static String returnScreenshotName() {
 		return (System.getProperty("user.dir") + "\\output\\imgs\\" + screenshotName).toString();
 	}
@@ -134,7 +137,7 @@ public class BasePage extends DriverFactory {
 	
 	
 	
-	// %%%%%%
+	
 	
 	// this is used in updating the name of the extent report
 	public static void copyLatestExtentReport() throws IOException {
@@ -146,7 +149,7 @@ public class BasePage extends DriverFactory {
 	}
 	
 	
-	// %%%%%%
+	
 	private static void copyFileUsingStream(File source, File dest) throws IOException {
 		InputStream is = null;
 		OutputStream os = null;

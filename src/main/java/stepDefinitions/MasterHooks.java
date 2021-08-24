@@ -12,7 +12,7 @@ import utils.DriverFactory;
 
 
 
-// %%%%%%%
+
 public class MasterHooks extends DriverFactory {
 	
 	@Before

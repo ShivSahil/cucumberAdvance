@@ -14,11 +14,12 @@ import pageObjects.ContactUs_Page;
 public class DriverFactory {
 	public static WebDriver driver;
 	public static ContactUs_Page contactUsPage;
+	
+	
+	
 	private Properties p;
 	private FileInputStream fi;
 
-	
-	
 	public WebDriver getDriver() throws IOException {
 		
 		
@@ -36,7 +37,7 @@ public class DriverFactory {
 			
 			case "firefox":
 				
-				// "checking for null". It mean we are checking if driver is not already initialized
+				// "checking for null". It mean we are checking if driver is already initialized or NOT
 				if (null == driver) {   
 					System.setProperty("webdriver.gecko.driver", Constant.GECKO_DRIVER_DIRECTORY);
 					driver = new FirefoxDriver();
@@ -67,9 +68,30 @@ public class DriverFactory {
 			driver.manage().timeouts().pageLoadTimeout(Integer.parseInt(p.getProperty("pageLoadTimeOut")), TimeUnit.SECONDS);
 			driver.manage().timeouts().implicitlyWait(Integer.parseInt(p.getProperty("implicitlyTimeOut")), TimeUnit.SECONDS);
 			
-			// ** WHAT THE FUCK IS THIS??? WE ARE USING PAGEFACTORY
+			
 			contactUsPage = PageFactory.initElements(driver, ContactUs_Page.class);
 		}
 		return driver;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

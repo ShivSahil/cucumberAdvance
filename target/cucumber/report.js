@@ -13,7 +13,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 3704825000,
+  "duration": 3799619100,
   "status": "passed"
 });
 formatter.scenario({
@@ -82,7 +82,7 @@ formatter.match({
   "location": "ContactUsSteps.i_access_webdriveruniversity_contact_us_form()"
 });
 formatter.result({
-  "duration": 1020468100,
+  "duration": 1088145000,
   "status": "passed"
 });
 formatter.match({
@@ -95,14 +95,14 @@ formatter.match({
   "location": "ContactUsSteps.i_enter_a_valid_firstname_as(String)"
 });
 formatter.result({
-  "duration": 188519700,
+  "duration": 230218800,
   "status": "passed"
 });
 formatter.match({
   "location": "ContactUsSteps.i_enter_a_valid_last_name(DataTable)"
 });
 formatter.result({
-  "duration": 154888900,
+  "duration": 168294000,
   "status": "passed"
 });
 formatter.match({
@@ -115,34 +115,32 @@ formatter.match({
   "location": "ContactUsSteps.i_enter_a_valid_email_address_as(String)"
 });
 formatter.result({
-  "duration": 203921400,
+  "duration": 220138300,
   "status": "passed"
 });
 formatter.match({
   "location": "ContactUsSteps.i_enter_comments(DataTable)"
 });
 formatter.result({
-  "duration": 189425000,
+  "duration": 189637600,
   "status": "passed"
 });
 formatter.match({
   "location": "ContactUsSteps.i_click_on_the_submit_button()"
 });
 formatter.result({
-  "duration": 7060240300,
+  "duration": 7044492500,
   "status": "passed"
 });
 formatter.match({
   "location": "ContactUsSteps.the_information_should_successfully_be_submitted_via_the_contact_us_form()"
 });
 formatter.result({
-  "duration": 46116800,
-  "error_message": "org.junit.ComparisonFailure: expected:\u003c...ou for your Message![123456789]\u003e but was:\u003c...ou for your Message![]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat pageObjects.ContactUs_Page.confirmContactUsFormSubmissionWasSuccessful(ContactUs_Page.java:67)\r\n\tat stepDefinitions.ContactUsSteps.the_information_should_successfully_be_submitted_via_the_contact_us_form(ContactUsSteps.java:53)\r\n\tat ✽.Then the information should successfully be submitted via the contact us form(contactus.feature:13)\r\n",
-  "status": "failed"
+  "duration": 71783600,
+  "status": "passed"
 });
-formatter.embedding("image/png", "embedded0.png");
 formatter.after({
-  "duration": 866990500,
+  "duration": 666215600,
   "status": "passed"
 });
 });

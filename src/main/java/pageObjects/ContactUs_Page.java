@@ -19,7 +19,10 @@ public class ContactUs_Page extends BasePage{
 	public @FindBy(xpath = "//input[@value='SUBMIT']") WebElement button_Submit;
 	public @FindBy(xpath = ".//*[@id='contact_reply']/h1") WebElement thanksContactUsPage;
 
-	// driver factory initialize them, then from here "WebDriverWait" is initialized
+	/* when instance of ContactUs_Page class is created in 
+	 * DriverFactory then  call is made to Base class. 
+	 * go to base class and see that WebdriverWait is being initialized there
+	 */
 	public ContactUs_Page() throws IOException {
 		super();
 	}
@@ -64,7 +67,7 @@ public class ContactUs_Page extends BasePage{
 	public ContactUs_Page confirmContactUsFormSubmissionWasSuccessful() throws Exception {
 		
 
-		Assert.assertEquals("Thank You for your Message!123456789", thanksContactUsPage.getText()  );	
+		Assert.assertEquals("Thank You for your Message!", thanksContactUsPage.getText()  );	
 		return new ContactUs_Page();
 	}
 
