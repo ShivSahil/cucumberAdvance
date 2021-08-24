@@ -2,9 +2,7 @@ package stepDefinitions;
 
 import java.io.IOException;
 
-import org.testng.Assert;
 
-import com.cucumber.listener.Reporter;
 
 import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
